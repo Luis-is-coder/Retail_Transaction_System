@@ -1,7 +1,11 @@
 # Retail Transaction System
 
 ## Project Summary
+<<<<<<< HEAD
 This project is a polytechnic second-year student assignment for a Retail Transaction System. It shows how a basic Node.js server can read CSV sales data and return retail transaction results through API endpoints.
+=======
+This project is an assignment for a Retail Transaction System. It shows how a basic Node.js server can read CSV sales data and return retail transaction results through API endpoints.
+>>>>>>> 4d31af1bb47ddf067ed7d38dfc5f2d7b713da2eb
 
 The system is built to:
 - load retail sales data from `data/retailTransaction.csv`
@@ -70,6 +74,7 @@ node server.js
 Then open `http://localhost:8081` or call the API routes from a browser or frontend app.
 
 ## Why this project is useful
+<<<<<<< HEAD
 This project demonstrates how a simple backend can turn raw CSV data into a useful retail transaction API. It is a good example of learning data parsing, Node.js server design, and basic API routing in a polytechnic software project.
 
 ![Main Page](assets/MainPage.png)
@@ -77,6 +82,7 @@ This project demonstrates how a simple backend can turn raw CSV data into a usef
 ![PaymentFilter-DebitCard-TableView](assets/PaymentFilter-DebitCard-TableView.png)
 ![RetailTransaction-CardView](assets/RetailTransaction-CardView.png)
 ![RetailTransaction-TableView](assets/RetailTransaction-TableView.png)
+
 
 
 
