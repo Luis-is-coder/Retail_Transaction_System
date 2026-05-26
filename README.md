@@ -1,89 +1,57 @@
 # Retail Transaction System
 
 ## Project Summary
-<<<<<<< HEAD
-This project is a polytechnic second-year student assignment for a Retail Transaction System. It shows how a basic Node.js server can read CSV sales data and return retail transaction results through API endpoints.
-=======
-This project is an assignment for a Retail Transaction System. It shows how a basic Node.js server can read CSV sales data and return retail transaction results through API endpoints.
->>>>>>> 4d31af1bb47ddf067ed7d38dfc5f2d7b713da2eb
+This is a Retail Transaction System. I built a simple Node.js server that reads retail sales data from a CSV file and turns it into API output for filtering and reporting.
 
-The system is built to:
-- load retail sales data from `data/retailTransaction.csv`
-- convert the CSV rows into JSON transaction records
-- provide endpoints for quick reports and filters
-- support browsing by payment method and product category
+What it does:
+- loads sales data from `data/retailTransaction.csv`
+- converts CSV rows into JSON transaction objects
+- supports filters by payment method and product category
+- gives quick API routes for the frontend to use
 
 ## Main files and what they do
 
 ### `server.js`
-This is the main server code for the retail transaction system.
-- imports required modules: `express`, `fs`, `csv-parse`, and `cors`
-- reads `data/retailTransaction.csv` on startup
-- processes each record into a JSON object
-- builds lookup maps for `paymentMethod` and `productCategory`
-- exposes API endpoints for front-end or client use
+The main app file.
+- uses `express`, `fs`, `csv-parse`, and `cors`
+- reads `data/retailTransaction.csv` when the server starts
+- converts each row into a JSON object
+- groups transactions by payment method and product category
+- exposes REST endpoints for the frontend or browser
 
 ### `package.json`
-The Node.js manifest for the root project.
-- lists project dependencies like `express`, `csv-parse`, and `cors`
-- allows `npm install` to install required packages
-
-### `package-lock.json`
-The lockfile that freezes exact package versions for consistent installs.
+Project info and dependencies.
+- includes packages like `express`, `csv-parse`, and `cors`
+- lets you install everything with `npm install`
 
 ### `data/retailTransaction.csv`
-The dataset used by the Retail Transaction System.
-- contains sales records in CSV format
-- includes fields such as customer ID, product ID, payment method, category, price, and total amount
+The data file with retail sales records.
+- is in CSV format
+- includes fields like customer ID, product ID, payment method, category, price, and total amount
 
-## How the system works
-1. Server reads the CSV file using `fs.createReadStream()`.
-2. CSV rows are parsed and converted to JavaScript objects.
-3. Each transaction object is stored in memory.
-4. Two maps are built to group transactions by:
-   - payment method
-   - product category
-5. The server starts on `localhost:8081` and serves API routes.
+## How it works
+1. Server starts and reads the CSV file using `fs.createReadStream()`.
+2. `csv-parse` parses each row into an object.
+3. All transaction objects are stored in memory.
+4. The app builds lookup groups for payment methods and product categories.
+5. Server runs on `localhost:8081` and responds to API calls.
 
 ## API endpoints
-These are the main routes you can use:
-- `GET /` — a simple health check message
-- `GET /retailData5` — returns the first 5 transactions
-- `GET /byPaymentMethod/:paymentMethod` — returns transactions for a payment method
-- `GET /byProductCategory/:productCategory` — returns transactions by category
-- `GET /productCategory` — returns the list of available product categories
-- `GET /paymentMethod` — returns the list of available payment methods
-
-## Notes on duplicate files
-This workspace contains duplicate file names in different folders, such as `package.json`, `package-lock.json`, `server.js`, and `data/retailTransaction.csv`.
-
-The actual working copy for the Retail Transaction System is the root-level `server.js` and root-level `data/retailTransaction.csv`.
-
-## Notes on hidden metadata files
-Files beginning with `._` (for example, `._package.json` or `._server.js`) are hidden metadata files from macOS or file transfer tools.
-- They are not real source files
-- They should be ignored or deleted
-- They are not used by the application
+Use these routes to get transaction data:
+- `GET /` — basic health check
+- `GET /retailData5` — first 5 transactions
+- `GET /byPaymentMethod/:paymentMethod` — transactions by payment method
+- `GET /byProductCategory/:productCategory` — transactions by category
+- `GET /productCategory` — list of available categories
+- `GET /paymentMethod` — list of available payment methods
 
 ## How to run the project
-From the workspace root:
+From the project root run:
 ```bash
 npm install
 node server.js
 ```
-Then open `http://localhost:8081` or call the API routes from a browser or frontend app.
+Then open `http://localhost:8081` in a browser or use the API routes.
 
-## Why this project is useful
-<<<<<<< HEAD
-This project demonstrates how a simple backend can turn raw CSV data into a useful retail transaction API. It is a good example of learning data parsing, Node.js server design, and basic API routing in a polytechnic software project.
-
-![Main Page](assets/MainPage.png)
-![PaymentFilter-DebitCard-CardView](assets/PaymentFilter-DebitCard-CardView.png)
-![PaymentFilter-DebitCard-TableView](assets/PaymentFilter-DebitCard-TableView.png)
-![RetailTransaction-CardView](assets/RetailTransaction-CardView.png)
-![RetailTransaction-TableView](assets/RetailTransaction-TableView.png)
-
-
-
-
-
+## What I learned
+This project helped me practise reading CSV data in Node.js, building simple REST APIs, and connecting backend data with a frontend app. It was a good exercise for understanding basic server logic and filtering data in a real project.
