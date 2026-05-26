@@ -55,3 +55,14 @@ Then open `http://localhost:8081` in a browser or use the API routes.
 
 ## What I learned
 This project helped me practise reading CSV data in Node.js, building simple REST APIs, and connecting backend data with a frontend app. It was a good exercise for understanding basic server logic and filtering data in a real project.
+
+
+![Main Page](images/assets/MainPage.png)
+
+![Payment Filter - Card View](images/assets/PaymentFilter-DebitCard-CardView.png)
+
+![Payment Filter - Table View](images/assets/PaymentFilter-DebitCard-TableView.png)
+
+![Retail Transaction - Card View](images/assets/RetailTransaction-CardView.png)
+
+![Retail Transaction - Table View](images/assets/RetailTransaction-TableView.png)
